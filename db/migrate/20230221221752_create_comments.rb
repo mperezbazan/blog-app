@@ -7,9 +7,9 @@ class CreateComments < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
-    add_reference :comments, :authors, foreign_key: true
+    add_foreign_key :likes, :users, column: :author_id, primary_key: 'id'
     add_reference :comments, :posts, foreign_key: true
-    add_index :comments, :authors
-    add_index :comments, :posts
+    add_index :comments, :author_id
+    add_index :comments, :post_id
   end
 end
