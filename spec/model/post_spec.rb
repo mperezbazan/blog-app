@@ -31,4 +31,8 @@ RSpec.describe Post, type: :model do
   it 'Post counter for user must be incremented' do
     expect(subject.user.posts_counter).to eql(1)
   end
+  it 'Show recent comments in array' do
+    Comment.create(author_id: test_user.id, post_id: subject.id, text: 'Test comment')
+    expect(subject.recent_comments.length).to eql(1)
+  end
 end
