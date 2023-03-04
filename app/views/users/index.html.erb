@@ -1,3 +1,6 @@
+<% if @users.count == 0 then%>
+  <h2>No users created</h2>
+<% end %>
 <% @users.each do |user| %>
   <%= render partial: 'layouts/user_header', locals: { user:user } %>
 <% end %>
