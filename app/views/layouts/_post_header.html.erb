@@ -1,0 +1,17 @@
+<%= link_to user_post_path(post.author_id, post.id),class: "post-container", :action => 'go' do %>
+  <% if from == 'post/show' %>
+    <div class="post-title">
+      #<%= post.id %> <%= post.title %> 
+      by <%= post.user.name %> 
+      <div class="post-data">
+        Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %>
+      </div>
+    </div>
+    <div class="post-text"><%= post.text %></div>
+  <% else %>
+    <div class="post-title">Post #<%= post.id %> - <%= post.title %> </div>
+    <div class="post-text"><%= post.text.truncate_words(20, omission: '...') %></div>
+    <div class="post-footer">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></div>
+  <% end %>
+  
+<% end %>

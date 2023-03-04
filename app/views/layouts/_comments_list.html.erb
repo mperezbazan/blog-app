@@ -1,0 +1,10 @@
+<div class="comments-container">
+  <% if comments.count === 0 then%>
+    <p>No comments</p>
+  <%end%>
+  <% comments.each do |comment| %>
+    <div class="comment-content">
+      <p class="comment-text"><%= comment.user.name%>: <%= comment.text %></p>
+    </div>
+  <% end %>
+</div>
