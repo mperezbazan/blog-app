@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+
+.user-container {
+  display: flex;
+  min-height: 100px;
+  width: 100%;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+}
+
+.user-avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.user-avatar {
+  height: 80px;
+  width: 80px;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+.user-content {
+  display: flex;
+  gap: 12px;
+  padding-inline: 24px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.user-title > a {
+  color: #000;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.user-text {
+  align-self: end;
+  font-size: 18px;
+}
+
+.user-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+  max-width: 600px;
+  padding: 24px;
+}
+
+.user-bio-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user-bio-description {
+  font-size: 24px;
+}
+
+.user-subtitle {
+  font-size: 32px;
+  font-weight: 600;
+  border-bottom: 2px solid #000;
+  width: 100%;
+  max-width: 600px;
+}
+
+.user-footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-footer-link > a {
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid #9b9b9b;
+  padding: 10px;
+  color: #000;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+  width: 100%;
+  max-width: 600px;
+  padding: 12px;
+  text-decoration: none;
+  color: #000;
+  gap: 12px;
+}
+
+.post-title-header {
+  display: flex;
+  width: 100%;
+}
+
+.post-title {
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-text {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.post-footer {
+  align-self: end;
+  font-size: 14px;
+  font-weight: 200;
+}

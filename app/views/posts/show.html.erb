@@ -1,1 +1,2 @@
-<p>User Post detail</p>
+<%= render partial: 'layouts/post_header', locals: { post: @post, from: 'post/show' } %>
+<%= render partial: 'layouts/comments_list', locals: { comments: @post.comments } %>

@@ -1,1 +1,6 @@
-<p>User Posts list</p>
+<%= render partial: 'layouts/user_header', locals: { user: @user } %>
+<div class="user-subtitle">All Posts</div>
+<% @user.recent_posts.each do |post| %>
+  <%= render partial: 'layouts/post_header', locals: { post: post , from: 'post/index' } %>
+  <%= render partial: 'layouts/comments_list', locals: { comments: post.recent_comments } %>
+<% end %>
