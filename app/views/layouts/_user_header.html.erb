@@ -1,0 +1,9 @@
+<div class="user-container">
+  <div class="user-avatar-container">
+    <img src="<%= url_for(user.photo) %>" class="user-avatar" alt="User image thumbnail">
+  </div>
+  <div class="user-content">
+      <p class="user-title"><%= link_to user.name, user_path(user.id) %></p>
+      <p class="user-text">Number of posts: <%= user.posts_counter %></p>
+  </div>
+</div>
