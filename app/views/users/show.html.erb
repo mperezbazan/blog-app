@@ -1,1 +1,12 @@
-<p>User details</p>
+<%= render partial: 'layouts/user_header', locals: { user: @user } %>
+<div class="user-details-container">
+  <div class="user-bio-title">Bio</div>
+  <div class="user-bio-description"><%= @user.bio %></div>
+</div>
+<div class="user-subtitle">Recent Posts</div>
+  <% @user.recent_posts.each do |post| %>
+    <%= render partial: 'layouts/post_header', locals: { post: post, from: 'user/show'  } %>
+  <% end %>
+  <div class="user-footer">
+    <small class="user-footer-link"><%= link_to 'See all posts', user_posts_path(@user.id), class: "link-dark" %></small>
+  </div>
