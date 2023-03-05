@@ -1,0 +1,15 @@
+<%= form_for [@user, @post] do |form| %>
+  <div class="form-container">
+    <div class="form-input-group">
+      <%= form.label :title, class:"form-label" %>
+      <%= form.text_field :title, class:"form-input", required: true %>
+    </div>
+    <div class="form-input-group">
+      <%= form.label :text, class:"form-label" %>
+      <%= form.text_field :text, class:"form-input", required: true %>
+    </div>
+    <div class="form-button-container">
+      <%= form.submit class:"form-button" %>
+    </div>
+  </div>
+<% end %>
