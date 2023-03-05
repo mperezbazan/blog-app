@@ -57,6 +57,14 @@ body {
   font-weight: bold;
 }
 
+.user-content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  height: 100%;
+}
+
 .user-text {
   align-self: end;
   font-size: 18px;
@@ -95,6 +103,14 @@ body {
   width: 100%;
   align-items: center;
   justify-content: center;
+}
+
+.new-post-button {
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid #9b9b9b;
+  padding: 10px;
+  color: #000;
 }
 
 .user-footer-link > a {
@@ -150,4 +166,57 @@ body {
   padding: 12px;
   margin-top: -24px;
   margin-bottom: 10px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 12px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+  padding: 24px;
+  border-radius: 20px;
+}
+
+.form-input-group {
+  display: flex;
+  gap: 12px;
+}
+
+.form-label {
+  font-size: 18px;
+}
+
+.form-input {
+  padding: 5px;
+}
+
+.form-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-block: 12px;
+}
+
+.form-button {
+  padding: 12px;
+  border-radius: 5px;
+  background-color: #1a98ca;
+  color: #fff;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #0a698f;
+}
+
+.post-actions-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin-top: -20px;
+  margin-bottom: 40px;
 }
