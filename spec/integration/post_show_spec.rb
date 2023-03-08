@@ -14,7 +14,8 @@ RSpec.describe 'Post Page Index', type: :feature do
       bio: 'Frontend Developer',
       posts_counter: 0
     )
-    @post = Post.create(author_id: @user.id, title: 'Hello', text: 'This is my first post!', comments_counter: 0, likes_counter: 0)
+    @post = Post.create(author_id: @user.id, title: 'Hello', text: 'This is my first post!', comments_counter: 0,
+                        likes_counter: 0)
     Comment.create(post_id: @post.id, author_id: @user.id, text: 'Happy to comment!')
     Comment.create(post_id: @post.id, author_id: @user_test.id, text: 'Today is a good day!')
     visit user_posts_path(@user.id)
