@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  test_user = User.find(1)
+  test_user = User.first
   test_post = Post.create(
     author_id: test_user.id,
     title: 'Hello',
@@ -16,7 +16,7 @@ RSpec.describe 'Posts', type: :request do
     end
     it 'render the index template wit Posts list text' do
       get "/users/#{test_user.id}/posts"
-      expect(response.body).to include('Posts list')
+      expect(response.body).to include(test_post.title)
     end
     it 'render the index template' do
       get "/users/#{test_user.id}/posts"
@@ -31,7 +31,7 @@ RSpec.describe 'Posts', type: :request do
     end
     it 'render the show template with Post details text' do
       get "/users/#{test_user.id}/posts/#{test_post.id}"
-      expect(response.body).to include('Post detail')
+      expect(response.body).to include(test_post.title)
     end
     it 'render the show template' do
       get "/users/#{test_user.id}/posts/#{test_post.id}"
