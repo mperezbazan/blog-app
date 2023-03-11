@@ -189,6 +189,7 @@ body {
 
 .form-input {
   padding: 5px;
+  margin-block: 10px;
 }
 
 .form-button-container {
@@ -219,4 +220,21 @@ body {
   max-width: 600px;
   margin-top: -20px;
   margin-bottom: 40px;
+}
+
+.link-login {
+  background-color: transparent;
+  border: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-login:hover {
+  transform: scale(1.2);
+  text-decoration: none;
+}
+
+.sign-main {
+  display: flex;
+  gap: 12px;
 }

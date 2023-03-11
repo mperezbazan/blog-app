@@ -1,6 +1,15 @@
 <% if @users.count == 0 then%>
   <h2>No users created</h2>
-<% end %>
-<% @users.each do |user| %>
-  <%= render partial: 'layouts/user_header', locals: { user:user } %>
+  <%= link_to "Register", new_user_registration_path, class: "link-login"%>
+  <% else %>
+    <div class="sign-main">
+      <% unless user_signed_in? %>
+        <%= link_to "Log in", new_user_session_path, class: "link-login"%>
+      <% end %>
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "link-login" %>
+    </div>
+
+    <% @users.each do |user| %>
+      <%= render partial: 'layouts/user_header', locals: { user:user } %>
+    <% end %>
 <% end %>
