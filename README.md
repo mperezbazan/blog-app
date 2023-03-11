@@ -140,6 +140,13 @@ Example:
 - Twitter: [@mperezbazan](https://twitter.com/mperezbazan)
 - LinkedIn: [mperezbazan](https://linkedin.com/in/mperezbazan)
 
+👤 **Paulina Gonzalez**
+
+- GitHub: [@paulinagonzalezc](https://github.com/paulinagonzalezc)
+- Twitter: [@paulinagzzc](https://twitter.com/paulinagzzc)
+- LinkedIn: [Paulina Gonzalez Cantu](https://linkedin.com/in/paulina-gonzalez-cantu)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
