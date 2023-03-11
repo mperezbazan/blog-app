@@ -1,13 +1,12 @@
 <% if @users.count == 0 then%>
   <h2>No users created</h2>
+  <%= link_to "Register", new_user_registration_path, class: "link-login"%>
   <% else %>
     <div class="sign-main">
-      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "devise-button" %>
       <% unless user_signed_in? %>
-        <button class="devise-button">
-          <%= link_to "Log in", new_user_session_path, class: "link-login"%>
-        </button>
+        <%= link_to "Log in", new_user_session_path, class: "link-login"%>
       <% end %>
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "link-login" %>
     </div>
 
     <% @users.each do |user| %>
